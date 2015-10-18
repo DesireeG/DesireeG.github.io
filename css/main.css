@@ -1,0 +1,374 @@
+* {
+  margin: 0; }
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Bevan', cursive; 
+}
+
+
+        /*/////////////HEADER & NAVIGATION STYLING//////////////*/
+#mynav {
+  position: absolute;
+  z-index: 2000;
+  width: 90%;
+  height: auto;
+  font-family: 'Bevan', cursive; }
+
+#navigation {
+  list-style: none;
+  margin: 0 auto; }
+  #navigation li {
+    float: left; }
+  #navigation li img {
+    max-width: 5vw;
+    height: auto; }
+  #navigation li a {
+    color: black;
+    font-size: 1.5vw;
+    text-decoration: none;
+    float: left;
+    margin-left: 2em;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-right: 1em; }
+  #navigation a:active {
+    text-decoration: underline;
+    color: #8800D6; }
+
+#contacts {
+  position: absolute;
+  z-index: 2000;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin-left: 100%;
+  margin-top: 3%;
+  width: 20%;
+  /* pop-up text arrow */
+  /* text pops up when icon is in hover state */
+  /* font awesome icons */ }
+  #contacts a {
+    color: #fff;
+    background: #9C60D1;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: fontawesome;
+    font-size: 2vw;
+    position: relative;
+    width: 10%;
+    height: 10%;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    padding: 2%;
+    display: inline-block; }
+  #contacts a span {
+    color: #666;
+    position: absolute;
+    font-family: sans-serif;
+    z-index: -1;
+    font-size: 10px;
+    border-radius: 2px;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  #contacts a:hover {
+    background: #ef92a3; }
+  #contacts a span:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 2px solid blue;
+    position: absolute;
+    bottom: -5px;
+    left: 40px; }
+  #contacts a:hover span {
+    bottom: 30px;
+    visibility: visible;
+    opacity: 1; }
+  #contacts a:nth-of-type(1):before {
+    content: '\f0d5'; }
+  #contacts a:nth-of-type(2):before {
+    content: '\f08c'; }
+  #contacts a:nth-of-type(3):before {
+    content: '\f113'; }
+
+
+ /*////////////////END OF HEADER & NAVIGATION///////////*/
+
+
+.panel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-shadow: 4px -4px 4px rgba(0, 0, 0, 0.2);
+  margin-left: -300%;
+  margin-top: 0;
+  z-index: 2;
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out; }
+
+.panel:target {
+  margin-left: 0%;
+  background-color: #FFFFFF; }
+
+@-webkit-keyframes slideOut {
+  0% {
+    top: -30px;
+    opacity: 0; }
+  100% {
+    top: 0px;
+    opacity: 1; } }
+@-moz-keyframes slideOut {
+  0% {
+    top: -30px;
+    opacity: 0; }
+  100% {
+    top: 0px;
+    opacity: 1; } }
+@-o-keyframes slideOut {
+  0% {
+    top: -30px;
+    opacity: 0; }
+  100% {
+    top: 0px;
+    opacity: 1; } }
+@-ms-keyframes slideOut {
+  0% {
+    top: -30px;
+    opacity: 0; }
+  100% {
+    top: 0px;
+    opacity: 1; } }
+@keyframes slideOut {
+  0% {
+    top: -30px;
+    opacity: 0; }
+  100% {
+    top: 0px;
+    opacity: 1; } }
+
+
+/*///// MY NAME BOUNCE IN//////
+============================================================================= */
+#logo {
+  color: #9C60D1;
+  font-family: 'Bevan', cursive;
+  font-size: 7vw;
+  margin-top: 3em;
+  margin-left: 1em;
+  position: absolute;
+  text-shadow: 2px 2px 8px #000; }
+  #logo p {
+    font-size: 2vw;
+    margin-left: 15%;
+    margin-top: 3%; }
+
+#logo span {
+  display: inline-block; }
+
+#gill {
+  margin-left: 1em; }
+
+/* ANIMATION FOR MY NAME
+============================================================================= */
+
+.dd {
+  animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s; }
+
+.de {
+  animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s; }
+
+.ds {
+  animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s; }
+
+.di {
+  animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s; }
+
+.dr {
+  animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s; }
+
+.de {
+  animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s; }
+
+.de2 {
+  animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  -webkit-animation-delay: 1.4s; }
+
+.gg {
+  animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  -webkit-animation-delay: 1.6s; }
+
+.gi {
+  animation-delay: 1.8s;
+  -moz-animation-delay: 1.8s;
+  -webkit-animation-delay: 1.8s; }
+
+.gl {
+  animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -webkit-animation-delay: 2s; }
+
+.gl2 {
+  animation-delay: 2.2s;
+  -moz-animation-delay: 2.2s;
+  -webkit-animation-delay: 2.2s; }
+
+/*/////////////////END OF ANIMATION//////////////////*/
+#home {
+  background-image: url("../images/homebg.jpg");
+  background-size: 100%; 
+}
+
+  #home p {
+    color: #000000;
+    font-size: 2vw;
+    text-shadow: none; }
+
+.container1 {
+  font-size: 1vw;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: 10%; }
+
+  .container1 h2 {
+    font-size: 6vw;
+    font-family: 'Bevan', cursive;
+    color: #9C60D1;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+     }
+  .container1 p {
+    font-size: 2vw;
+    margin-top: 2%;
+     }
+
+#skills {
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 5%; 
+}
+  #skills hr {
+    margin-bottom: 5%; 
+  }
+  #skills .mine {
+    width: 30%;
+    height: auto;
+    float: left;
+    margin-left: 2.5%; 
+  }
+  #skills p {
+    font-size: 1.5vw;
+    text-align: center;
+     }
+  #skills i {
+    color: #9C60D1; 
+  }
+
+.container2 {
+  font-size: 1vw;
+  max-width: 60%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 10%; 
+}
+  .container2 h2 {
+    font-size: 6vw;
+    font-family: 'Bevan', cursive;
+    color: #9C60D1;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+     }
+  .container2 p {
+    font-size: 2vw;
+    margin-top: 2%;
+     }
+
+.project {
+  width: 40%;
+  height: auto;
+  border: 2px solid #000000;
+  display: block; 
+}
+
+.container3 {
+  margin: 0 auto;
+  max-width: 50%;
+  height: auto;
+  margin-top: 10%; 
+}
+  .container3 h2 {
+    font-size: 6vw;
+    font-family: 'Bevan', cursive;
+    color: #9C60D1;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    padding-left: 6%;
+    margin-bottom: 2%;
+     }
+
+#form {
+  margin: 0 auto;
+   }
+
+#form input {
+  display: inline-block;
+  font-size: 2vw;
+  max-width: 43%;
+  height: auto; 
+}
+
+#form input, #form textarea {
+  border: 1px solid black;
+  color: #000;
+  padding: 2%; 
+}
+
+#form textarea {
+  width: 87%;
+  height: auto;
+  margin-top: 2em;
+  font-size: 2vw; 
+}
+
+#form #send-message {
+  max-width: 40%;
+  max-height: auto;
+  background-color: #9c60d1;
+  color: #fff;
+  font-size: 2vw;
+  margin-top: 1em;
+  border: none;
+   }
+
+
